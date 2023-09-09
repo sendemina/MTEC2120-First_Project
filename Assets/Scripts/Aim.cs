@@ -9,7 +9,7 @@ public class Aim : MonoBehaviour
     void Update()
     {
         Vector3 target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        bow.transform.LookAt(target * -1);
+        bow.transform.LookAt(target);
     }
 
     //void Method2()

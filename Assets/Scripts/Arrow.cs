@@ -13,6 +13,6 @@ public class Arrow : MonoBehaviour
     private void OnCollisionEnter(Collision other)
     {
         Debug.Log("The arrow hit" + other.gameObject.name);
-       Destroy(gameObject, 2f);
+        Destroy(gameObject, 2f);
     }
 }

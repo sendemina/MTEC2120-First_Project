@@ -6,6 +6,7 @@ public class Bow : MonoBehaviour
 {
     [SerializeField] private GameObject arrowPrefab;
     [SerializeField] private Transform bowDock;
+    [SerializeField] private float arrowForce = 2000f;
 
     void Start()
     {
@@ -14,10 +15,10 @@ public class Bow : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetMouseButtonDown(0)) //left mouse button
+        if(Input.GetMouseButtonUp(0)) //left mouse button
         {
             GameObject go = Instantiate(arrowPrefab, bowDock.position, bowDock.rotation);
-            go.GetComponent<Rigidbody>().AddForce(bowDock.forward * 1000f);
+            go.GetComponent<Rigidbody>().AddForce(bowDock.forward * arrowForce);
         }
     }
 }

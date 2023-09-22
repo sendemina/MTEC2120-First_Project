@@ -27,6 +27,9 @@ public class Aim : MonoBehaviour
 
     void Update()
     {
+        Vector3 bowDirection = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.farClipPlane));
+        bow.transform.LookAt(bowDirection);
+
         if (Input.GetMouseButton(0))
         {
             aimVirtualCamera.gameObject.SetActive(true);

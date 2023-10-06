@@ -5,6 +5,7 @@ using Cinemachine;
 using StarterAssets;
 using System.Drawing;
 
+
 public class Aim : MonoBehaviour
 {
     [SerializeField] private GameObject bow;
@@ -12,11 +13,16 @@ public class Aim : MonoBehaviour
     [SerializeField] private float normalSensitivity = 5f;
     [SerializeField] private float aimSensitivity = 1f;
 
+    private StarterAssetsInputs _input;
+
+
+
     private ThirdPersonController thirdPersonController;
 
     private void Awake()
     {
         thirdPersonController = GetComponent<ThirdPersonController>();
+        _input = GetComponent<StarterAssetsInputs>();
     }
 
     //void Update()
@@ -30,7 +36,7 @@ public class Aim : MonoBehaviour
         Vector3 bowDirection = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.farClipPlane));
         bow.transform.LookAt(bowDirection);
 
-        if (Input.GetMouseButton(0))
+        if (_input.shoot)
         {
             aimVirtualCamera.gameObject.SetActive(true);
             thirdPersonController.SetSensitivity(aimSensitivity);
@@ -47,6 +53,8 @@ public class Aim : MonoBehaviour
             bow.transform.LookAt(raycastHit.point);
         }
     }
+
+
 }
 
 

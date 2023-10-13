@@ -43,8 +43,17 @@
                 },
                 {
                     "name": "Shoot",
-                    "type": "PassThrough",
+                    "type": "Value",
                     "id": "7b67a22a-7ddb-4c1e-aa9b-1a6c3d343b25",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Kick",
+                    "type": "Value",
+                    "id": "139521a1-0810-4333-a3d4-b9f5b46e7ddd",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -231,11 +240,22 @@
                 {
                     "name": "",
                     "id": "96449f32-b7c0-453b-a995-e7aff121054e",
-                    "path": "<Mouse>/middleButton",
+                    "path": "<Mouse>/leftButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "KeyboardMouse",
                     "action": "Shoot",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0f241bd8-6ad4-4fa7-b0c5-e6bd2d897bd7",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KeyboardMouse",
+                    "action": "Kick",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

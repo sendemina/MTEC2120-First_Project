@@ -98,6 +98,11 @@ namespace StarterAssets
         private int _animIDJump;
         private int _animIDFreeFall;
         private int _animIDMotionSpeed;
+        private int _animIDKick;
+        private int _animIDAim;
+        private int _animIDShoot;
+
+        public InputActionReference shootAction;
 
 #if ENABLE_INPUT_SYSTEM 
         private PlayerInput _playerInput;
@@ -123,6 +128,17 @@ namespace StarterAssets
             }
         }
 
+        private void OnEnable()
+        {
+            shootAction.action.Enable();
+
+        }
+
+
+        private void OnDisable()
+        {
+            shootAction.action.Disable();
+        }
 
         private void Awake()
         {
@@ -151,13 +167,31 @@ namespace StarterAssets
             // reset our timeouts on start
             _jumpTimeoutDelta = JumpTimeout;
             _fallTimeoutDelta = FallTimeout;
+
+            shootAction.action.performed += context =>
+            {
+                if (_hasAnimator)
+                {
+                    _animator.SetBool(_animIDShoot, false);
+                    _animator.SetBool(_animIDAim, true);
+                }
+            };
+
+            shootAction.action.canceled += context =>
+            {
+                if (_hasAnimator)
+                {
+                    _animator.SetBool(_animIDAim, false);
+                    _animator.SetBool(_animIDShoot, true);
+                }
+            };
         }
 
         private void Update()
         {
             _hasAnimator = TryGetComponent(out _animator);
 
-            JumpAndGravity();
+            JumpAndGravity(); //and kick
             GroundedCheck();
             Move();
         }
@@ -174,6 +208,9 @@ namespace StarterAssets
             _animIDJump = Animator.StringToHash("Jump");
             _animIDFreeFall = Animator.StringToHash("FreeFall");
             _animIDMotionSpeed = Animator.StringToHash("MotionSpeed");
+            _animIDKick = Animator.StringToHash("Kicking");
+            _animIDAim = Animator.StringToHash("Aiming");
+            _animIDShoot = Animator.StringToHash("Shooting");
         }
 
         private void GroundedCheck()
@@ -292,6 +329,7 @@ namespace StarterAssets
                 {
                     _animator.SetBool(_animIDJump, false);
                     _animator.SetBool(_animIDFreeFall, false);
+                    _animator.SetBool(_animIDKick, false);
                 }
 
                 // stop our velocity dropping infinitely when grounded
@@ -310,6 +348,16 @@ namespace StarterAssets
                     if (_hasAnimator)
                     {
                         _animator.SetBool(_animIDJump, true);
+                    }
+                }
+
+                //Kick
+                if (_input.kick)
+                {
+                    // update animator if using character
+                    if (_hasAnimator)
+                    {
+                        _animator.SetBool(_animIDKick, true);
                     }
                 }
 

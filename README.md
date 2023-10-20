@@ -20,8 +20,8 @@ https://github.com/sendemina/MTEC2120-First_Project/assets/89432530/a09dadfc-c7b
 
 ## Homework 6
 ### Added custom animations to the character 
-### *- shooting an arrow on left click
-### *- kicking on right click
+### shooting an arrow on left click
+### kicking on right click
 
 https://github.com/sendemina/MTEC2120-First_Project/assets/89432530/980f5229-d804-4741-8bc2-64f0b1e35318
 

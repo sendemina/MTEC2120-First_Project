@@ -2589,6 +2589,7 @@ MonoBehaviour:
   aimVirtualCamera: {fileID: 1857850700}
   normalSensitivity: 3
   aimSensitivity: 1.5
+  shootAction: {fileID: 0}
 --- !u!1001 &1793506979
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2801,6 +2802,7 @@ MonoBehaviour:
   arrowPrefab: {fileID: 1972994549902028749, guid: c71209845aeaf4f759aa81c9ce366b6b, type: 3}
   bowDock: {fileID: 993004402}
   arrowForce: 3000
+  shootAction: {fileID: 2409018485399810276, guid: 4419d82f33d36e848b3ed5af4c8da37e, type: 3}
 --- !u!1001 &1960627145
 PrefabInstance:
   m_ObjectHideFlags: 0

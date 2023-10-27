@@ -62,7 +62,12 @@ public class StateController : MonoBehaviour
          ChangeState(new SitState());
          _animator.SetBool(_animIDSit, true);
 
-        if (_animator.GetBool(_animIDSit)) //if is currently sitting
+        //if (_animator.GetBool(_animIDSit)) //if is currently sitting
+        //{
+        //    _animator.SetBool(_animIDSleep, true);
+        //}
+
+        if (_animator.GetCurrentAnimatorStateInfo(0).IsName("SitLoop"))
         {
             _animator.SetBool(_animIDSleep, true);
         }

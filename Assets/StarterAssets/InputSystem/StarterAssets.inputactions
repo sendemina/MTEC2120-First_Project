@@ -42,27 +42,9 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Shoot",
-                    "type": "Value",
-                    "id": "7b67a22a-7ddb-4c1e-aa9b-1a6c3d343b25",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": true
-                },
-                {
-                    "name": "Kick",
-                    "type": "Value",
-                    "id": "139521a1-0810-4333-a3d4-b9f5b46e7ddd",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": true
-                },
-                {
-                    "name": "Rest",
+                    "name": "Interact",
                     "type": "Button",
-                    "id": "bb6456b2-1dfc-4aa4-bd89-cc19fd52223b",
+                    "id": "0edfe8e1-436f-4271-a732-2c066ebd98a6",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -248,34 +230,12 @@
                 },
                 {
                     "name": "",
-                    "id": "96449f32-b7c0-453b-a995-e7aff121054e",
-                    "path": "<Mouse>/leftButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "KeyboardMouse",
-                    "action": "Shoot",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "0f241bd8-6ad4-4fa7-b0c5-e6bd2d897bd7",
-                    "path": "<Mouse>/rightButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "KeyboardMouse",
-                    "action": "Kick",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "37f1de51-8854-4b60-8b2a-42ef45a807bd",
-                    "path": "<Keyboard>/r",
+                    "id": "83614e8c-7529-4e74-9f1f-8e8efb17ff52",
+                    "path": "<Keyboard>/e",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Rest",
+                    "action": "Interact",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -43,7 +43,7 @@ public class Aim : MonoBehaviour
         shootAction.action.performed += context =>
         {
             aimVirtualCamera.gameObject.SetActive(true);
-            thirdPersonController.SetSensitivity(aimSensitivity);
+            //thirdPersonController.SetSensitivity(aimSensitivity);
             Debug.Log("Shoot Action is called. ");
 
             //Vector3 bowDirection = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.farClipPlane));
@@ -59,7 +59,7 @@ public class Aim : MonoBehaviour
         shootAction.action.canceled += context =>
         {
             aimVirtualCamera.gameObject.SetActive(false);
-            thirdPersonController.SetSensitivity(normalSensitivity);
+            //thirdPersonController.SetSensitivity(normalSensitivity);
         };
 
     }

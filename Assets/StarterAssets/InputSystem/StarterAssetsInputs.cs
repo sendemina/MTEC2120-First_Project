@@ -12,9 +12,6 @@ namespace StarterAssets
 		public Vector2 look;
 		public bool jump;
 		public bool sprint;
-		public bool shoot;
-		public bool kick;
-		public bool rest;
 
 		[Header("Movement Settings")]
 		public bool analogMovement;
@@ -45,21 +42,6 @@ namespace StarterAssets
 		public void OnSprint(InputValue value)
 		{
 			SprintInput(value.isPressed);
-		}
-
-		public void OnShoot(InputValue value)
-		{
-			ShootInput(value.isPressed);
-		}
-
-		public void OnKick(InputValue value)
-		{
-			KickInput(value.isPressed);
-		}
-
-		public void OnRest(InputValue value)
-		{
-			RestInput(value.isPressed);
 		}
 #endif
 
@@ -93,23 +75,6 @@ namespace StarterAssets
 		{
 			Cursor.lockState = newState ? CursorLockMode.Locked : CursorLockMode.None;
 		}
-
-		public void ShootInput(bool newShootState)
-		{
-			shoot = newShootState;
-		}
-
-		public void KickInput(bool newKickState)
-		{
-			kick = newKickState;
-		}
-
-		public void RestInput(bool newRestState)
-		{
-			rest = newRestState;
-		}
 	}
-
-
-
+	
 }

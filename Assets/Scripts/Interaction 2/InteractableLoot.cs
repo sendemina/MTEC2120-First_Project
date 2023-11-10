@@ -14,7 +14,7 @@ public class InteractableLoot : Interactable
 
 		print("Unfortunately you can't take my loot yet.");
 		DisableCollider();
-		Destroy(this);
+		Destroy(this.gameObject);
 
 		//OpenLoot();
 	}

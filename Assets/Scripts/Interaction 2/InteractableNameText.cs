@@ -41,7 +41,7 @@ public class InteractableNameText : MonoBehaviour
         }
 		else
 		{
-            text.text = interactable.interactableName;
+            text.text = interactable.interactableName + "\n [E] Interact"; ;
         }
 
 	}

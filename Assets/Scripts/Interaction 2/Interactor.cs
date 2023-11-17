@@ -39,7 +39,7 @@ public class Interactor : MonoBehaviour
         if (Physics.Raycast(origin, direction, out hit, maxInteractingDistance, layerMask))
         {
 
-            //Debug.Log("Raycast hit.");
+            // Debug.Log("Raycast hit.");
             hitPosition = hit.point;
             hitDistance = hit.distance;
             if (hit.transform.TryGetComponent<Interactable>(out interactableTarget))

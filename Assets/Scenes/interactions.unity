@@ -3082,7 +3082,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4362777713356076592, guid: 85d201beca3e3d8408d380afb2ee3dd3, type: 3}
       propertyPath: m_Size.y
-      value: 0.88179934
+      value: 4.0247765
       objectReference: {fileID: 0}
     - target: {fileID: 4362777713356076592, guid: 85d201beca3e3d8408d380afb2ee3dd3, type: 3}
       propertyPath: m_Size.z
@@ -3094,7 +3094,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4362777713356076592, guid: 85d201beca3e3d8408d380afb2ee3dd3, type: 3}
       propertyPath: m_Center.y
-      value: -0.15910035
+      value: -1.7305889
       objectReference: {fileID: 0}
     - target: {fileID: 4362777713356076592, guid: 85d201beca3e3d8408d380afb2ee3dd3, type: 3}
       propertyPath: m_Center.z
@@ -3393,14 +3393,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b2be203a2c314815b1234dc32ee320a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactableName: Chest
-  interactionDistance: 5
-  isInteractable: 1
-  interactableNameText: {fileID: 0}
-  interactableNameCanvas: {fileID: 0}
-  isLocked: 0
-  chestID: 
-  isOpen: 0
 --- !u!95 &1598874373
 Animator:
   serializedVersion: 5
